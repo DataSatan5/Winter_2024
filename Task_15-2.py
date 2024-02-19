@@ -1,4 +1,5 @@
 import re
-string = 'A123BC78 K456CT178 HH001CC99 C8888YX78 T089CT177 G105CT78 X666XX187 K020EK78'
-regex = r'\b[ABEKMHOPCTYX]\d{3}[ABEKMHOPCTYX]{2}[1]*78\b'
+alf = 'ABCEHKMOPTXYАВСЕНКМОРТХУ'
+regex = fr"[{alf}]\d\d\d[{alf}][{alf}]1?78"
+string = input()
 print(re.findall(regex, string))
